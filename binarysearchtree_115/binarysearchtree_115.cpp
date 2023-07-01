@@ -29,3 +29,12 @@ public:
 	}
 
 	void insert(string element) //insert a node in the binary search tree
+	{
+		Node* newNode = new Node(element, NULL, NULL); //allocate memory for the new node
+		newNode->info = element; //assign value to the data field of the new node
+		newNode->leftchild = NULL; // make the left child of the new node poin to null
+		newNode->rightchild = NULL; //make the right child of the node poin to null
+
+		Node* parent = NULL;
+		Node* currentNode = NULL;
+		search(element, parent, currentNode); //locate the node which will be the parent of yhe node to be inserted
