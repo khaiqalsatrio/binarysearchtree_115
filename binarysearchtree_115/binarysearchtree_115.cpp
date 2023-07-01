@@ -70,3 +70,5 @@ public:
 				currentNode = currentNode->rightchild;
 		}
 	}
+
+	void inoder(Node* ptr)
