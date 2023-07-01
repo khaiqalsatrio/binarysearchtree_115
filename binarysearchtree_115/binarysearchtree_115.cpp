@@ -72,3 +72,16 @@ public:
 	}
 
 	void inoder(Node* ptr)
+	{
+		if (ROOT == NULL)
+		{
+			cout << "Tree is empty" << endl;
+			return;
+		}
+		if (ptr != NULL)
+		{
+			inoder(ptr->leftchild);
+			cout << ptr->info << " ";
+			inoder(ptr->rightchild);
+		}
+	}
